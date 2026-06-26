@@ -70,6 +70,22 @@
                     animation-delay: 1.4s;
                 }
 
+                &:nth-child(9):before {
+                    animation-delay: 1.6s;
+                }
+
+                &:nth-child(10):before {
+                    animation-delay: 1.8s;
+                }
+
+                &:nth-child(11):before {
+                    animation-delay: 2s;
+                }
+
+                &:nth-child(12):before {
+                    animation-delay: 2.2s;
+                }
+
                 &::before {
                     animation: letters-loading 4s infinite;
                     color: $header-color;
