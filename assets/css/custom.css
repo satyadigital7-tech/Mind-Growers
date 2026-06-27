@@ -1113,3 +1113,138 @@ h6 {
   max-width: 500px !important;
   margin: 0 auto !important;
 }
+
+/* --- CUSTOM PRELOADER ANIMATION OVERRIDE --- */
+/* Override animation settings to prevent 3D rotation collisions */
+.preloader .animation-preloader .txt-loading .letters-loading::before {
+  animation: letters-loading-new 3s infinite !important;
+  transform: none !important;
+  top: 0 !important;
+}
+
+@keyframes letters-loading-new {
+  0%, 75%, 100% {
+    opacity: 0.15;
+    transform: translateY(10px);
+  }
+  35%, 65% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Specific sequential delays for all 21 letters of 'MIND GROWERS KIDDORIA' */
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(1):before { animation-delay: 0.05s !important; }
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(2):before { animation-delay: 0.10s !important; }
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(3):before { animation-delay: 0.15s !important; }
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(4):before { animation-delay: 0.20s !important; }
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(5):before { animation-delay: 0.25s !important; }
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(6):before { animation-delay: 0.30s !important; }
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(7):before { animation-delay: 0.35s !important; }
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(8):before { animation-delay: 0.40s !important; }
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(9):before { animation-delay: 0.45s !important; }
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(10):before { animation-delay: 0.50s !important; }
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(11):before { animation-delay: 0.55s !important; }
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(12):before { animation-delay: 0.60s !important; }
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(13):before { animation-delay: 0.65s !important; }
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(14):before { animation-delay: 0.70s !important; }
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(15):before { animation-delay: 0.75s !important; }
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(16):before { animation-delay: 0.80s !important; }
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(17):before { animation-delay: 0.85s !important; }
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(18):before { animation-delay: 0.90s !important; }
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(19):before { animation-delay: 0.95s !important; }
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(20):before { animation-delay: 1.00s !important; }
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(21):before { animation-delay: 1.05s !important; }
+
+/* --- HEADER LOGO SIZING & RESPONSIVENESS --- */
+.header-logo img {
+  max-height: 95px !important;
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 767px) {
+  .header-logo img {
+    max-height: 80px !important;
+  }
+}
+
+/* --- HERO SECTION BOTTOM PADDING INCREASE --- */
+.hero-1 {
+  padding-bottom: 150px !important; /* Increased from 40px */
+}
+
+@media (max-width: 991px) {
+  .hero-1 {
+    padding-bottom: 80px !important; /* Increased from 0px */
+  }
+}
+
+/* --- OUR PHILOSOPHY IMAGE MASK FIX --- */
+.about-activities-wrapper .activities-img-items .activities-image {
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 508 485"><path fill-rule="evenodd" clip-rule="evenodd" d="M273.307 22.3171C313.958 21.7364 354.018 -9.9391 392.233 3.1801C429.93 16.1214 448.114 56.8471 468.691 89.3925C487.204 118.672 501.176 150.33 506.594 184.055C511.646 215.497 501.66 246.444 499.018 278.149C496.315 310.595 504.839 344.713 490.737 374.404C476.393 404.605 448.022 426.759 419.387 445.812C390.95 464.733 359.473 482.18 324.811 484.809C290.921 487.38 261.165 463.161 227.293 460.384C188.086 457.169 146.979 481.781 110.746 467.257C75.3239 453.059 46.6799 419.717 37.6358 384.361C28.4117 348.301 68.3117 313.334 62.0057 276.717C55.164 236.989 -9.04387 211.189 1.08003 172.094C10.8117 134.513 77.5118 141.105 104.627 112.126C132.07 82.7954 119.879 25.7702 155.969 6.55486C190.772 -11.9748 233.369 22.8875 273.307 22.3171Z" /></svg>') no-repeat center center / cover !important;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 508 485"><path fill-rule="evenodd" clip-rule="evenodd" d="M273.307 22.3171C313.958 21.7364 354.018 -9.9391 392.233 3.1801C429.93 16.1214 448.114 56.8471 468.691 89.3925C487.204 118.672 501.176 150.33 506.594 184.055C511.646 215.497 501.66 246.444 499.018 278.149C496.315 310.595 504.839 344.713 490.737 374.404C476.393 404.605 448.022 426.759 419.387 445.812C390.95 464.733 359.473 482.18 324.811 484.809C290.921 487.38 261.165 463.161 227.293 460.384C188.086 457.169 146.979 481.781 110.746 467.257C75.3239 453.059 46.6799 419.717 37.6358 384.361C28.4117 348.301 68.3117 313.334 62.0057 276.717C55.164 236.989 -9.04387 211.189 1.08003 172.094C10.8117 134.513 77.5118 141.105 104.627 112.126C132.07 82.7954 119.879 25.7702 155.969 6.55486C190.772 -11.9748 233.369 22.8875 273.307 22.3171Z" /></svg>') no-repeat center center / cover !important;
+}
+
+.about-activities-wrapper .activities-img-items .activities-image img {
+  object-fit: cover !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* --- FOOTER LOGO TRANSPARENCY FIX --- */
+.footer-logo-img {
+  filter: brightness(0) invert(1) !important;
+}
+
+/* --- ADMISSION PROCESS CONNECTOR OVERLAP FIX --- */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .process-work-wrapper .work-process-items .line-shape {
+    right: -40% !important;
+    width: 100px !important;
+  }
+  .process-work-wrapper .work-process-items .line-shape-2 {
+    right: -40% !important;
+    width: 100px !important;
+    top: -20% !important;
+  }
+  .process-work-wrapper .work-process-items .line-shape img,
+  .process-work-wrapper .work-process-items .line-shape-2 img {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+/* --- CTA GRADUATION GIRL IMAGE SIZING & CENTERING FIX --- */
+.cta-wrapper .cta-image {
+  text-align: center !important;
+  margin-bottom: -170px !important; /* Pull it down to remove bottom gap! */
+}
+
+.cta-wrapper .cta-image .cta-shape {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+.cta-wrapper .cta-image img {
+  max-width: 380px !important; /* Constrain width so it fits beautifully! */
+  height: auto !important;
+  display: inline-block;
+}
+
+@media (max-width: 991px) {
+  .cta-wrapper .cta-image {
+    margin-bottom: -110px !important; /* Slightly smaller pull on tablets/mobiles */
+  }
+  .cta-wrapper .cta-image img {
+    max-width: 300px !important; /* Slightly smaller on tablets/mobiles */
+  }
+}
+
+/* --- FOOTER CRAFTED ATTRIBUTION --- */
+.footer-crafted a {
+  transition: all 0.3s ease !important;
+}
+.footer-crafted a:hover {
+  color: var(--theme2) !important;
+}
