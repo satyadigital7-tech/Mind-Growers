@@ -1285,8 +1285,8 @@ a[href^="mailto:"] {
 
 /* --- GALLERY SWIPER SLIDER STYLING --- */
 .gallery-swiper {
-  padding: 10px 10px 60px 10px !important;
-  overflow: visible !important;
+  padding: 15px 10px 60px 10px !important;
+  overflow: hidden !important;
 }
 
 .gallery-swiper .swiper-pagination-bullet-active {
