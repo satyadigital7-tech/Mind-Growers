@@ -267,7 +267,18 @@ CSS TABLE OF CONTENTS
    }
 
         //>> Video Popup Start <<//
-        $(".img-popup").magnificPopup({
+        $('.gallery-swiper').each(function() {
+            $(this).magnificPopup({
+                delegate: 'a.img-popup',
+                type: 'image',
+                gallery: {
+                    enabled: true,
+                },
+            });
+        });
+
+        // Fallback/Direct binding for non-swiper popup images
+        $(".img-popup").not('.gallery-swiper a.img-popup').magnificPopup({
             type: "image",
             gallery: {
                 enabled: true,
