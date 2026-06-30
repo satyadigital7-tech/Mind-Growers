@@ -1306,7 +1306,7 @@ a[href^="mailto:"] {
 /* Avoid clipping of active bullet outer ring in dynamic pagination */
 .gallery-swiper .swiper-pagination-bullets-dynamic {
   height: 40px !important;
-  padding: 15px 0 !important;
+  padding: 8px 0 !important;
   box-sizing: border-box !important;
 }
 
