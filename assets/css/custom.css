@@ -1303,6 +1303,22 @@ a[href^="mailto:"] {
   display: none !important;
 }
 
+/* Avoid clipping of active bullet outer ring in dynamic pagination */
+.gallery-swiper .swiper-pagination-bullets-dynamic {
+  height: 32px !important;
+  padding: 11px 0 !important;
+  box-sizing: border-box !important;
+}
+
+.gallery-swiper .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+  vertical-align: middle !important;
+}
+
+.gallery-swiper .swiper-pagination-bullets-dynamic .swiper-pagination-bullet.swiper-pagination-bullet-active::before {
+  top: -10px !important;
+  left: -10px !important;
+}
+
 /* --- MOBILE NAVIGATION ROBUSTNESS FALLBACK --- */
 @media (max-width: 1199px) {
   .main-menu {
